@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+    <t t-name="company_team_snippet_content">
+        <t t-foreach="teammates" t-as="tm">
+            <div class="col-lg-6 pt24 pb24">
+                <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <div class="col-lg-4 pb16 o_not_editable" contenteditable="false">
+                        <img t-attf-src="#{tm.avatar}"/>
+                    </div>
+                    <div class="col-lg-8">
+                        <h4 t-esc="tm.name"/>
+                        <p t-raw="tm.comment"/>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </t>
+</templates>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="company_team_snippet" name="Teammates">
+        <section class="s_company_team pt48 pb48">
+            <div class="container dynamic_snippet_teammates">
+                <div class="row s_nb_column_fixed teammates">
+                    placeholder
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="external_snippets" inherit_id="website.snippets" priority="8">
+        <xpath expr="//div[@id='snippet_feature']//t[@t-snippet][last()]" position="after">
+            <t t-snippet="website_team.company_team_snippet"/>
+        </xpath>
+    </template>
+
+</odoo>
