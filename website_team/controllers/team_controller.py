@@ -14,7 +14,7 @@ class TeamController(http.Controller):
         return {"teammates": [{
             "name": team_mate.name,
             "avatar": "/web/image/res.partner/{}/avatar_128".format(team_mate.id),
-            "comment": team_mate.comment,
+            "comment": team_mate.comment or "<p></p>",
         } for team_mate in team_mates]}
 
     @http.route("/team_snippet", auth="public")
